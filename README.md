@@ -1,0 +1,1 @@
+Built a content-based movie recommender system with an end-to-end ML pipeline, achieving ~85% accuracy in suggesting relevant movies. Integrated a custom user-input interface for dynamic movie search and personalized filtering based on genres and ratings.
