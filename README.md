@@ -1,8 +1,8 @@
-# Movie Recommender System
+#  Movie Recommender System
 
 This project is a **content-based movie recommendation system** built with **Streamlit**. It suggests movies similar to your favorites using metadata such as cast, crew, genres, and keywords from the TMDB 5000 Movies Dataset.
 
- **Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
+**Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
 
 ---
 
@@ -15,7 +15,7 @@ This project is a **content-based movie recommendation system** built with **Str
 
 ---
 
-##  Objective
+## Objective
 
 Recommend similar movies based on:
 - Overview (plot description)
@@ -23,6 +23,23 @@ Recommend similar movies based on:
 - Director (crew)
 - Genres
 - Keywords
+
+---
+
+## Data Analysis (EDA)
+
+The project includes an in-depth analysis notebook:
+
+ **Notebook**: `Movie_recommender_system.ipynb`
+
+Key insights covered:
+- Distribution of movies by genre
+- Word clouds for most frequent keywords and overviews
+- Most common actors, directors, and production companies
+- Trends in release years
+- Preprocessing of text data and construction of "tags"
+
+Run the notebook locally or on Google Colab to understand the logic behind the system and preprocessing techniques.
 
 ---
 
@@ -35,6 +52,7 @@ Recommend similar movies based on:
 - **NLTK** – for tokenization
 - **Pickle** – for saving data and similarity matrix
 - **TMDB API** – to fetch movie posters
+- **Matplotlib, Seaborn, WordCloud** – for visualization (in the notebook)
 
 ---
 
@@ -44,20 +62,20 @@ Recommend similar movies based on:
 - Search for a movie and get **top 5 similar recommendations**
 - Movie **posters dynamically fetched** from TMDB using their API
 - Fast and scalable with precomputed **cosine similarity matrix**
-- Uses **compressed model file** (`similarity.pbz2`) to reduce file size
+- Includes **analysis notebook** explaining EDA and model building
 
 ---
 
 ##  Project Structure
 
 ```
- movie-recommender-system/
-├── main.py                  # Streamlit app script
-├── movies.pkl               # Pickled DataFrame of movie metadata
-├── similarity.pbz2          # Compressed similarity matrix
-├── requirements.txt         # Python dependencies
-├── README.md                # Project overview (this file)
-└── Movie_recommender_system(1).ipynb                # python notebook
+ Movie_Recommender_System/
+├── main.py                       # Streamlit app script
+├── Movie_recommender_system.ipynb # Notebook for EDA and model building
+├── movies.pkl                    # Pickled DataFrame of movie metadata
+├── similarity.pbz2               # Compressed similarity matrix
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project overview (this file)
 ```
 
 ---
@@ -90,12 +108,13 @@ Recommend similar movies based on:
 
 ##  Files Explained
 
-| File                | Purpose                                          |
-|---------------------|--------------------------------------------------|
-| `main.py`           | Streamlit web app code                          |
-| `movies.pkl`        | Pickled DataFrame with movie metadata           |
-| `similarity.pbz2`   | Compressed cosine similarity matrix             |
-| `requirements.txt`  | List of required Python libraries               |
+| File                          | Purpose                                          |
+|-------------------------------|--------------------------------------------------|
+| `main.py`                     | Streamlit web app code                          |
+| `Movie_recommender_system.ipynb` | Jupyter notebook for EDA and model pipeline   |
+| `movies.pkl`                  | Pickled DataFrame with movie metadata           |
+| `similarity.pbz2`             | Compressed cosine similarity matrix             |
+| `requirements.txt`            | List of required Python libraries               |
 
 ---
 
@@ -108,22 +127,10 @@ Posters are fetched using the **TMDB API**:
 
 ---
 
-##  Example Output
 
-![App Screenshot](https://your-screenshot-link.com/example.png) <!-- Replace with real image URL if available -->
 
----
 
-##  Future Improvements
-
-- Add collaborative filtering (user-based recommendations)
-- Include genre filters or search by keyword
-- Store user history & feedback
-- Add ratings and reviews
-
----
-
-##  Credits
+## Credits
 
 - Dataset: [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 - Poster API: [TMDB API](https://www.themoviedb.org/)
@@ -140,8 +147,7 @@ If you like this project:
 
 ---
 
-## Author
+##  Author
 
 **Kahkashan** – *Data Science & ML Enthusiast*  
-💼 [LinkedIn](https://www.linkedin.com/in/kahkashan-manzoor-663384287/) 
-
+ [LinkedIn](https://www.linkedin.com/in/kahkashan-manzoor-663384287/)
