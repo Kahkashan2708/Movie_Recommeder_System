@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import requests
+import bz2
 
 
 def fetch_poster(movie_id):
@@ -22,7 +23,10 @@ def fetch_poster(movie_id):
 
 # Load the data
 movies = pickle.load(open("movies.pkl", "rb"))  # This is a DataFrame
-similarity = pickle.load(open("similarity.pkl", "rb"))
+# Load compressed similarity file
+with bz2.BZ2File("similarity.pbz2", "rb") as f:
+    similarity = pickle.load(f)
+
 
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
