@@ -34,7 +34,6 @@ The project includes an in-depth analysis notebook:
 
 Key insights covered:
 - Distribution of movies by genre
-- Word clouds for most frequent keywords and overviews
 - Most common actors, directors, and production companies
 - Trends in release years
 - Preprocessing of text data and construction of "tags"
