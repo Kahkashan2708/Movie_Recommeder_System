@@ -2,7 +2,7 @@
 
 This project is a **content-based movie recommendation system** built with **Streamlit**. It suggests movies similar to your favorites using metadata such as cast, crew, genres, and keywords from the TMDB 5000 Movies Dataset.
 
- **Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7ajld.streamlit.app)
+ **Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
 
 ---
 
@@ -26,7 +26,7 @@ Recommend similar movies based on:
 
 ---
 
-## 🛠️ Tech Stack & Tools
+##  Tech Stack & Tools
 
 - **Python**
 - **Streamlit** – for web UI
@@ -142,5 +142,5 @@ If you like this project:
 ## Author
 
 **Kahkashan** – *Data Science & ML Enthusiast*  
-💼 [LinkedIn](https://www.linkedin.com) | 📝 [Portfolio](https://your-portfolio-link.com)
+💼 [LinkedIn](https://www.linkedin.com/in/kahkashan-manzoor-663384287/) 
 
