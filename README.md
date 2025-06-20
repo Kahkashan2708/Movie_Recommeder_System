@@ -1,62 +1,146 @@
-#  Movie Recommender System
+# Movie Recommender System
 
-This project builds a **content-based movie recommendation system** using the TMDB 5000 Movies Dataset. It helps users find movies similar to their favorites based on metadata such as cast, crew, genres, and keywords.
+This project is a **content-based movie recommendation system** built with **Streamlit**. It suggests movies similar to your favorites using metadata such as cast, crew, genres, and keywords from the TMDB 5000 Movies Dataset.
+
+ **Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7ajld.streamlit.app)
+
+---
 
 ##  Dataset
 
+- **Source**: [TMDB 5000 Movie Dataset on Kaggle](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 - **Files Used**:
   - `tmdb_5000_movies.csv`
   - `tmdb_5000_credits.csv`
-- Dataset source: [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
-## Objective
+---
 
-To recommend movies that are similar in content using features such as:
-- Overview
+##  Objective
+
+Recommend similar movies based on:
+- Overview (plot description)
 - Cast
-- Crew
+- Director (crew)
 - Genres
 - Keywords
 
-##  Tools & Libraries
+---
+
+## 🛠️ Tech Stack & Tools
 
 - **Python**
-- **Pandas**
-- **NumPy**
-- **Scikit-learn**
-- **NLTK** (Natural Language Toolkit)
-- **Jupyter Notebook**
+- **Streamlit** – for web UI
+- **Pandas, NumPy** – for data manipulation
+- **Scikit-learn** – for text vectorization & similarity computation
+- **NLTK** – for tokenization
+- **Pickle** – for saving data and similarity matrix
+- **TMDB API** – to fetch movie posters
 
-##  Features
+---
 
-- Merges movie metadata and credits into a single DataFrame.
-- Extracts relevant features for content-based filtering.
-- Performs preprocessing (e.g., parsing JSON-like columns).
-- Converts text data into vectors using **TF-IDF** or **CountVectorizer**.
-- Computes **cosine similarity** to find and rank similar movies.
-- Provides a simple function to return top recommended movies.
+##  Key Features
 
-##  Data Preprocessing
+- Clean and professional web interface using **Streamlit**
+- Search for a movie and get **top 5 similar recommendations**
+- Movie **posters dynamically fetched** from TMDB using their API
+- Fast and scalable with precomputed **cosine similarity matrix**
+- Uses **compressed model file** (`similarity.pbz2`) to reduce file size
 
-- Extracts director and top 3 cast members.
-- Cleans and tokenizes keywords and genres.
-- Constructs a combined "tags" column for vectorization.
+---
 
-##  How to Run
+##  Project Structure
 
-1. Clone this repository or download the notebook.
-2. Ensure you have the required libraries installed:
-   ```bash
-   pip install numpy pandas scikit-learn nltk
-   ```
-3. Download the dataset from [this Kaggle link](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
-4. Place both CSV files (`tmdb_5000_movies.csv`, `tmdb_5000_credits.csv`) in the same directory as the notebook.
-5. Open `Movie_recommender_system.ipynb` in Jupyter Notebook and run all cells.
-
-##  Example Usage
-
-```python
-recommend("Inception")
+```
+ movie-recommender-system/
+├── main.py                  # Streamlit app script
+├── movies.pkl               # Pickled DataFrame of movie metadata
+├── similarity.pbz2          # Compressed similarity matrix
+├── requirements.txt         # Python dependencies
+└── README.md                # Project overview (this file)
 ```
 
-Returns the top 5 movies similar to **Inception**.
+---
+
+##  How to Run Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/movie-recommender-system.git
+   cd movie-recommender-system
+   ```
+
+2. **Create a virtual environment** (recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the app**:
+   ```bash
+   streamlit run main.py
+   ```
+
+---
+
+##  Files Explained
+
+| File                | Purpose                                          |
+|---------------------|--------------------------------------------------|
+| `main.py`           | Streamlit web app code                          |
+| `movies.pkl`        | Pickled DataFrame with movie metadata           |
+| `similarity.pbz2`   | Compressed cosine similarity matrix             |
+| `requirements.txt`  | List of required Python libraries               |
+
+---
+
+##  API Integration
+
+Posters are fetched using the **TMDB API**:
+
+- API Used: [The Movie Database API](https://developers.themoviedb.org/)
+- You can replace the API key in `main.py` or store it securely via Streamlit Secrets.
+
+---
+
+##  Example Output
+
+![App Screenshot](https://your-screenshot-link.com/example.png) <!-- Replace with real image URL if available -->
+
+---
+
+##  Future Improvements
+
+- Add collaborative filtering (user-based recommendations)
+- Include genre filters or search by keyword
+- Store user history & feedback
+- Add ratings and reviews
+
+---
+
+##  Credits
+
+- Dataset: [Kaggle - TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- Poster API: [TMDB API](https://www.themoviedb.org/)
+- UI: Built with [Streamlit](https://streamlit.io/)
+
+---
+
+##  Show Your Support
+
+If you like this project:
+-  Star the repo
+-  Share it with friends
+-  Fork and build on top of it!
+
+---
+
+## Author
+
+**Kahkashan** – *Data Science & ML Enthusiast*  
+💼 [LinkedIn](https://www.linkedin.com) | 📝 [Portfolio](https://your-portfolio-link.com)
+
