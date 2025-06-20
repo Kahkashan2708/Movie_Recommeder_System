@@ -56,7 +56,8 @@ Recommend similar movies based on:
 ├── movies.pkl               # Pickled DataFrame of movie metadata
 ├── similarity.pbz2          # Compressed similarity matrix
 ├── requirements.txt         # Python dependencies
-└── README.md                # Project overview (this file)
+├── README.md                # Project overview (this file)
+└── Movie_recommender_system(1).ipynb                # python notebook
 ```
 
 ---
