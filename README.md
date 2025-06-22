@@ -2,7 +2,7 @@
 
 This project is a **content-based movie recommendation system** built with **Streamlit**. It suggests movies similar to your favorites using metadata such as cast, crew, genres, and keywords from the TMDB 5000 Movies Dataset.
 
-**Live App**: [Try the Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
+**Live App**: [Try Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
 
 ---
 
@@ -83,7 +83,7 @@ Run the notebook locally or on Google Colab to understand the logic behind the s
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/movie-recommender-system.git
+   git clone https://github.com/Kahkashan2708/Movie_Recommender_System.git
    cd movie-recommender-system
    ```
 
