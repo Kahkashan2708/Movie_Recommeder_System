@@ -3,9 +3,9 @@
 This project is a **content-based movie recommendation system** built with **Streamlit**. It suggests movies similar to your favorites using metadata such as cast, crew, genres, and keywords from the TMDB 5000 Movies Dataset.
 
 **Live App**: [Try Movie Recommender Now!](https://movierecommedersystem-josclp2gzkpxiesgj7aljd.streamlit.app/)
-!(mrs_image.jpg)
 
----
+![Movie Recommender System Screenshot](mrs_image.jpg)
+
 
 ##  Dataset
 
